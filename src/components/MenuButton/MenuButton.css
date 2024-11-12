@@ -1,0 +1,43 @@
+.header__menu-button {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .header__menu-button {
+    width: 18px;
+    height: 14px;
+    background-color: transparent;
+    border: 0;
+  }
+  .header__menu-button.active {
+    display: grid;
+  }
+
+  .header__menu-button.active span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+
+  .header__menu-button.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 4px);
+  }
+  .header__menu-button.active span:nth-child(2) {
+    transform: rotate(-45deg) translate(0px, 1px);
+  }
+
+  .header__menu-button.unActive {
+    display: grid;
+    gap: 6px;
+  }
+
+  .header__menu-button.unActive span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+  }
+}

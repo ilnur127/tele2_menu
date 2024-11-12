@@ -1,0 +1,122 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  height: 40px;
+  background: rgba(31, 34, 41, 1);
+  z-index: 1;
+  padding: 0 10%;
+}
+.header_rightBlock {
+  display: flex;
+  gap: 32px;
+}
+
+.header__location {
+  color: rgba(124, 135, 146, 1);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header__nav {
+  height: 47px;
+  margin: 40px 10% 0;
+  border-bottom: 1px solid rgba(211, 217, 223, 1);
+}
+
+.header__nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 18px;
+  height: 100%;
+}
+
+.header__nav-item {
+  color: rgba(124, 135, 146, 1);
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__nav-item a {
+  color: rgba(124, 135, 146, 1);
+  text-decoration: none;
+}
+.header__nav-item.active {
+  border-bottom: 2px solid rgba(31, 34, 41, 1);
+  margin-bottom: -1px;
+}
+.header__nav-item.active a {
+  color: rgba(31, 34, 41, 1);
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .header_rightBlock {
+    gap: 18px;
+    margin-top: 6px;
+  }
+  .header__location {
+    display: none;
+  }
+  .header__location.mobile {
+    display: block;
+    height: 56px;
+    background: rgba(243, 245, 246, 1);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 -13%;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 64px);
+    background-color: #fff;
+    transition: transform 0.3s linear;
+    margin: 64px 0 0;
+    padding: 0 10%;
+    z-index: 1;
+    transform: translate(0, -110%);
+  }
+  .header__nav.active {
+    transform: translate(0, 0);
+  }
+
+  .header__nav-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__nav-item {
+    font-weight: 700;
+    height: auto;
+    color: rgba(149, 149, 151, 1);
+    padding-bottom: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(237, 237, 237, 1);
+    text-decoration: none;
+  }
+
+  .header__nav-item a {
+    color: rgba(149, 149, 151, 1);
+  }
+}
