@@ -6,7 +6,7 @@ import { MenuButton } from "../../../components/MenuButton/MenuButton";
 import { Notification } from "../../../components/NotificationBell";
 
 import "./Header.css";
-import { ReactComponent as Logo } from "./Logo.svg";
+import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as Location } from "./location.svg";
 
 const routes = [
