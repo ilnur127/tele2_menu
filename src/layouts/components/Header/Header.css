@@ -64,6 +64,10 @@
 }
 
 @media (max-width: 576px) {
+  .header > svg {
+    height: 18px;
+    width: 48px;
+  }
   .header_rightBlock {
     gap: 18px;
     margin-top: 6px;
@@ -95,15 +99,16 @@
     padding: 0 10%;
     z-index: 1;
     transform: translate(0, -110%);
+    justify-content: space-between;
   }
   .header__nav.active {
     transform: translate(0, 0);
   }
 
   .header__nav-list {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .header__nav-item {

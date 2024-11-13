@@ -6,7 +6,7 @@ import { MenuButton } from "../../../components/MenuButton/MenuButton";
 import { Notification } from "../../../components/NotificationBell";
 
 import "./Header.css";
-import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Logo } from "./Logo.svg";
 import { ReactComponent as Location } from "./location.svg";
 
 const routes = [
@@ -40,8 +40,8 @@ export const Header = () => {
           <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />
         </div>
       </header>
-      <nav className={`header__nav ${isOpen ? "active" : ""}`} ref={menuRef}>
-        <ul className="header__nav-list">
+      <nav className={`header__nav ${isOpen ? "active" : ""}`}>
+        <ul className="header__nav-list" ref={menuRef}>
           {routes.map((route) => (
             <li
               className={`header__nav-item ${
